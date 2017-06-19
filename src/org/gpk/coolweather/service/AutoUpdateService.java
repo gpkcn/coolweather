@@ -1,5 +1,6 @@
 package org.gpk.coolweather.service;
 
+import org.gpk.coolweather.receiver.AutoUpdateReceiver;
 import org.gpk.coolweather.until.HttpCallbackListener;
 import org.gpk.coolweather.until.HttpUtil;
 import org.gpk.coolweather.until.Utility;
