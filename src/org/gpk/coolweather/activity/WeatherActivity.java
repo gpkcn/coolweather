@@ -3,6 +3,7 @@ package org.gpk.coolweather.activity;
 import org.gpk.coolweather.R;
 import org.gpk.coolweather.R.id;
 import org.gpk.coolweather.R.layout;
+import org.gpk.coolweather.service.AutoUpdateService;
 import org.gpk.coolweather.until.HttpCallbackListener;
 import org.gpk.coolweather.until.HttpUtil;
 import org.gpk.coolweather.until.Utility;
@@ -186,5 +187,8 @@ private Button refreshWeather;
 		currentDateText.setText(prefs.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);
 		}
 }
